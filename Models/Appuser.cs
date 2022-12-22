@@ -1,9 +1,17 @@
-﻿namespace Webprogramlama.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Webprogramlama.Models
 {
     public class Appuser
     {
-        public string? username { get; set; }
+        [Key]
+        public int? Id { get; set; } 
+        public int? km { get; set; }
 
-        public Cars? Cars { get; set; } 
+        public Address? Address { get; set; } 
+
+        public ICollection<Club> Clubs { get; set; }
+
+        public ICollection<Race> Races { get; set; }
     }
 }
