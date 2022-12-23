@@ -2,7 +2,7 @@
 
 namespace Webprogramlama.Models
 {
-    public class Appuser
+    public class AppUser
     {
         [Key]
         public int? Id { get; set; } 
