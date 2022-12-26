@@ -2,10 +2,10 @@
 {
     public enum RaceCategory
     {
-        Drag,
-        Drift,
-        Circuit,
-        Sprint,
-        LapKnockout
+        Marthon,
+        Ultra,
+        FiveK,
+        TenK,
+        HalfMarathon
     }
 }

@@ -5,8 +5,8 @@ namespace Webprogramlama.Models
     public class AppUser
     {
         [Key]
-        public int? Id { get; set; } 
-        public int? km { get; set; }
+        public int? Pace { get; set; } 
+        public int? Mileage { get; set; }
 
         public Address? Address { get; set; } 
 

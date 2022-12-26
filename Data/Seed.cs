@@ -26,11 +26,12 @@ namespace RunGroopWebApp.Data
                             Title = "Running Club 1",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first cinema",
-                            ClubCategory = ClubCategory.Men,
+                            ClubCategory = ClubCategory.City,
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte"
+                                City = "Charlotte",
+                                State = "NC"
                             }
                          },
                         new Club()
@@ -38,11 +39,12 @@ namespace RunGroopWebApp.Data
                             Title = "Running Club 2",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first cinema",
-                            ClubCategory = ClubCategory.Women,
+                            ClubCategory = ClubCategory.Endurance,
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte"
+                                City = "Charlotte",
+                                State = "NC"
                             }
                         },
                         new Club()
@@ -50,11 +52,12 @@ namespace RunGroopWebApp.Data
                             Title = "Running Club 3",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first club",
-                            ClubCategory = ClubCategory.Hobby,
+                            ClubCategory = ClubCategory.Trail,
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte"
+                                City = "Charlotte",
+                                State = "NC"
                             }
                         },
                         new Club()
@@ -62,11 +65,12 @@ namespace RunGroopWebApp.Data
                             Title = "Running Club 3",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first club",
-                            ClubCategory = ClubCategory.Men,
+                            ClubCategory = ClubCategory.City,
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Michigan"
+                                City = "Michigan",
+                                State = "NC"
                             }
                         }
                     });
@@ -82,11 +86,12 @@ namespace RunGroopWebApp.Data
                             Title = "Running Race 1",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first race",
-                            RaceCategory = RaceCategory.Circuit,
+                            RaceCategory = RaceCategory.Marathon,
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte"
+                                City = "Charlotte",
+                                State = "NC"
                             }
                         },
                         new Race()
@@ -94,13 +99,13 @@ namespace RunGroopWebApp.Data
                             Title = "Running Race 2",
                             Image = "https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/running.jpg?quality=82&strip=1&resize=640%2C360",
                             Description = "This is the description of the first race",
-                            RaceCategory = RaceCategory.Drag,
+                            RaceCategory = RaceCategory.Ultra,
                             AddressId = 5,
                             Address = new Address()
                             {
                                 Street = "123 Main St",
-                                City = "Charlotte"
-
+                                City = "Charlotte",
+                                State = "NC"
                             }
                         }
                     });

@@ -2,9 +2,10 @@
 {
     public enum ClubCategory
     {
-        Women,
-        Men,
-        Hobby,
-        Bet
+        RoadRunner,
+        Womens,
+        City,
+        Trails,
+        Endurance
     }
 }
