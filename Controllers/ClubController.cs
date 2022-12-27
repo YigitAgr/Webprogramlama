@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Webprogramlama.Data;
+using Webprogramlama.Models;
 
 namespace Webprogramlama.Controllers
 {
@@ -12,8 +13,13 @@ namespace Webprogramlama.Controllers
         }
         public IActionResult Index()
         {
-            var clubs = _context.Clubs.ToList();
+            List<Club> clubs = _context.Clubs.ToList();
             return View(clubs);
+        }
+        public IActionResult Detail(int id)
+        {
+            Club club = _context.Clubs.FirstOrDefault(c => c.Id == id);
+            return View(club);
         }
     }
 }
