@@ -5,7 +5,7 @@
         RoadRunner,
         Womens,
         City,
-        Trails,
+        Trail,
         Endurance
     }
 }
