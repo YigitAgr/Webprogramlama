@@ -24,5 +24,9 @@ namespace Webprogramlama.Controllers
             Club club = await _clubRepository.GetByIdAsync(id);
             return View(club);
         }
+        public IActionResult Create() 
+        {
+            return View();
+        }
     }
 }
