@@ -5,15 +5,20 @@ using Webprogramlama.Data;
 using Webprogramlama.Interfaces;
 using Webprogramlama.Models;
 using Webprogramlama.Repository;
+using Webprogramlama.Services;
+using Webprogramlama.ViewModels;
 
 namespace Webprogramlama.Controllers
 {
     public class RaceController : Controller
     {
         private readonly IRaceRepository _raceRepository;
-        public RaceController(IRaceRepository raceRepository) 
+        private readonly IPhotoService _photoService;
+
+        public RaceController(IRaceRepository raceRepository , IPhotoService photoService) 
         {
             _raceRepository = raceRepository;
+            _photoService = photoService;
         }
         public async Task<IActionResult> Index()
         {
@@ -31,14 +36,32 @@ namespace Webprogramlama.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(Race race)
+        public async Task<IActionResult> Create(CreateRaceViewModel raceVM)
         {
             if (!ModelState.IsValid)
             {
-                return View(race);
+                var result = await _photoService.AddPhotoAsync(raceVM.Image);
+                var race = new Race
+                {
+                    Title = raceVM.Title,
+                    Description = raceVM.Description,
+                    Image = result.Url.ToString(),
+                    Address = new Address
+                    {
+                        Street = raceVM.Address.Street,
+                        City = raceVM.Address.City,
+                        State = raceVM.Address.State,
+
+                    }
+                };
+                _raceRepository.Add(race);
+                return RedirectToAction("index");
             }
-            _raceRepository.Add(race);
-            return RedirectToAction("index");
+            else
+            {
+                ModelState.AddModelError("", "Photo upload failed");
+            }
+            return View(raceVM);
         }
     }
 }
