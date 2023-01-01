@@ -37,7 +37,7 @@ namespace Webprogramlama.Repository
 
         public async Task<Race> GetByIdAsync(int id)
         {
-            return await _context.Races.Include(i => i.Address).FirstOrDefaultAsync();
+            return await _context.Races.Include(i => i.Address).FirstOrDefaultAsync(i => i.Id == id);
         }
         public async Task<Race> GetByIdAsyncNoTracking(int id)
         {
